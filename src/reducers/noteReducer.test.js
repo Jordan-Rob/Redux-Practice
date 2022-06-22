@@ -20,6 +20,7 @@ describe('noteReducer', () => {
         expect(newState).toContainEqual(action.data)
     })
 
+    
     test('returns new state with action TOGGLE_IMPORTANCE', () => {
         const state = [
           {

@@ -1,12 +1,13 @@
 const noteReducer = (state = [], action) => {
-    /*
+    
     if(action.type === 'NEW_NOTE') {
-      //state.push(action.data) this is not allowed as it directly changes state
+      //state.push(action.data) //this is not allowed as it directly changes state
       state.concat(action.data)
       return state
     }
-    */
 
+
+    /*
     switch(action.type){
       case 'NEW_NOTE':
         return state.concat(action.data)
@@ -24,6 +25,7 @@ const noteReducer = (state = [], action) => {
       default:
         return state
     }
+    */
   }
 
   export default noteReducer

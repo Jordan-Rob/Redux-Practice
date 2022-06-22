@@ -42,7 +42,17 @@ const App = () => {
 
 */
 
+/*
+const noteReducer = (state = [], action) => {
+  if (action.type === 'NEW_NOTE') {
+    state.push(action.data)
+    return state
+  }
 
+  return state
+}
+
+*/
 
 const store = createStore(noteReducer)
 
@@ -55,7 +65,7 @@ store.dispatch({
   }
 })
 
-store.dispactch({
+store.dispatch({
   type: 'NEW_NOTE',
   data: {
     content: 'state changes are made with actions',
@@ -67,14 +77,13 @@ store.dispactch({
 const App = () => {
   return(
     <div>
-      <hi>Notes</hi>
       <ul>
-        {store.getState().map(note => 
+        {store.getState().map(note=>
           <li key={note.id}>
-            {note.content} <strong>{note.important? "important":""}</strong>
+            {note.content} <strong>{note.important ? 'important' : ''}</strong>
           </li>
         )}
-      </ul>
+        </ul>
     </div>
   )
 }
