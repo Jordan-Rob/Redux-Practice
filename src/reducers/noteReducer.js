@@ -17,7 +17,7 @@ const noteReducer = (state = [], action) => {
         const noteToChange = state.find(n => n.id === id)
         const changedNote = {
             ...noteToChange,
-            important: !noteToChange.imprtant
+            important: !noteToChange.important
         }
         return state.map(note => 
           note.id !== id? note : changedNote
